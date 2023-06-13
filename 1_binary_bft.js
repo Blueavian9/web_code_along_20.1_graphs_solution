@@ -1,4 +1,4 @@
-class node {
+  class node {
   constructor(value) {
     this.value = value
     this.left = null
@@ -30,4 +30,5 @@ const head = new node(6)
 head.left = new node(3)
 head.right = new node(9)
 
-console.log(traverse(head)) // 6, 3, 9
+console.log(traverse(head)) // 6, 3, 9 
+ 
