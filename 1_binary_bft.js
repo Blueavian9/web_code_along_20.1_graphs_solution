@@ -37,23 +37,63 @@ class node {
     this.right = null;
   }
 }
+// Implement a breadth-first traversal (BFT) for a binary tree.
+// Inputs:
+//   root: node (root of the binary tree)
+
+// Output: list of values in the order of a breadth-first traversal
 
 function traverse(root) {
   const value = [];
   const queue = [];
-  queue.push(root);
 
-  while (current.length) {
-    queue.push(current.left);
+  // your BFT code here
+  // Enque: queue.push(value)
+  queue.push(root);
+  while (queue.length) {
+    // Serve level
+    const current = queue.shift();
+    value.push(current.value);
+    let leftChild = current.left;
+    let rightChild = current.right;
+
+    if (leftChild !== null) {
+      queue.push(leftChild);
+    }
+    if (rightChild !== null) {
+      queue.push(rightChild);
+    }
   }
-  if (current.left !== null) {
-    queue.push(current.left);
-  }
-  if (current.right !== null) {
-    queue.push(current.right);
-  }
+  return value;
+
+  // Dequeue: queue.shift()
 }
-return value;
+
+/* First Level Traversal ===  BFT (F.I.F.O.) === queue
+   DFT  === Stack === (L.I.F.O.)
+               6
+            /    \
+           3      10
+         /  \    /  
+        2    4  7    
+*/
+
+// function traverse(root) {
+//   const value = [];
+//   const queue = [];
+//   queue.push(root);
+
+//   while (current.length) {
+//     queue.push(current.left);
+//   }
+//   if (current.left !== null) {
+//     queue.push(current.left);
+//   }
+//   if (current.right !== null) {
+//     queue.push(current.right);
+//   }
+// }
+// return value;
 
 // Test cases:
 const head = new node(6);
@@ -61,3 +101,12 @@ head.left = new node(3);
 head.right = new node(9);
 
 console.log(traverse(head)); // 6, 3, 9
+
+
+/*
+
+      6
+    /   \
+   3     9
+
+*/
