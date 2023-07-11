@@ -1,4 +1,4 @@
-function traverse(grahp, root) {
+function traverse(graph, root) {
   const value = [];
   const queue = [];
   queue.push(root);
@@ -22,7 +22,7 @@ function traverse(grahp, root) {
   return values;
 }
 
-// Test cases
+// Test cases:
 // We'll be using this simple undirected graph to test our BFT:
 // 5 -- 3
 // | \ /

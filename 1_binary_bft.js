@@ -96,12 +96,11 @@ function traverse(root) {
 // return value;
 
 // Test cases:
-const head = new node(6);
-head.left = new node(3);
-head.right = new node(9);
+// const head = new node(6);
+// head.left = new node(3);
+// head.right = new node(9);
 
-console.log(traverse(head)); // 6, 3, 9
-
+// console.log(traverse(head)); // 6, 3, 9
 
 /*
 
@@ -110,3 +109,42 @@ console.log(traverse(head)); // 6, 3, 9
    3     9
 
 */
+
+// Arrow Function: Arrow functions are a compact and concise way to write anonymous functions in JS
+// They were introduced in ES6 and have some semantic differences and limitations compared to traditional function expressions arrow functions do not have their own bindings to this, arguments, or super, and cannot be used as methods, constructors, or generators. Arrow functions are written as a function expression with parenthesis, followed by an arrow (=>), followed by an expression that is returned by the function.  
+
+// function message() {
+//   return "Hello World!";
+// }
+
+// let message = () => {
+//   return "Hello World!";
+// };
+
+// console.log(message());
+
+// Closure
+for (var i = 0; i < 3; i++) { 
+//1. 
+//  first we declare 
+//  a variable "i"
+//  with the var keyword
+//  then a for loop
+//  that will run 3 times
+//  by incrementing 
+//  that variable
+
+}
+  const log = () => {
+    console.log(i); // i == output 
+  }; // inside the for loop is where closures come into play define a function log that concole.log's the global variable "i". this is not a pure function because it depends on a variable outside of it's scope therefore creating a closure  
+
+  setTimeout(log, 100);  // then from there we set up a Timeout functioin as the callback this queue's up a task to execute the log function after 100 miliseconds.
+
+
+// we are capturing the i in a varible for each iteration of a loop so 
+// The tricky part about a closure is that the var and let 
+// when we use var in a for loop that variable actually gets hoisted up into that parent scope which in this case would be the global scope 
+// with var we have a global variable that we are mutating over and over again
+// but with let we are creating a variable that is scoped to the for loop in simple words it's local to the for loop and can't be accessed outside of it. 
+// Thus a closure is a combination of of a function and it's lexical environment
