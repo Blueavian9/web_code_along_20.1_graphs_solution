@@ -149,3 +149,26 @@ console.log(traverse(head)); // 6, 3, 9
 // with var we have a global variable that we are mutating over and over again
 // but with let we are creating a variable that is scoped to the for loop in simple words it's local to the for loop and can't be accessed outside of it.
 // Thus a closure is a combination of of a function and it's lexical environment
+function traverse(root) {
+  const values = []
+  const queue = []
+  //YOUR CODE GOES HERE
+  queue.push(root)
+  //Dequeue: queue.shift()
+  while (queue.length) {
+    let current = queue.shift()
+
+  }
+}
+
+/* 
+PLAN: 
+
+1. 
+
+2.
+3. 
+3b. dequeue the queue + push to output array
+4. repeat until queue is empty
+5. return output array. 
+*/
