@@ -13,5 +13,4 @@ console.log(fact(3)); // 3 * 2 * 1 => 6
 console.log(fact(4)); // 4 * 3 * 2 * 1 => 24
 console.log(fact(5)); // 5 * 4 * 3 * 2 * 1 => 120
 
-
-//FUNCTIONAL ALGORITHMS 
+//FUNCTIONAL ALGORITHMS
