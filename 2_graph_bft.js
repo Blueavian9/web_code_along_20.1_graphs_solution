@@ -12,10 +12,10 @@ function traverse(graph, root) {
     values.push(current);
 
     // if not yet mark it as visited, and enqueue it.
-    for (let neighboor of graph[current]) {
-      if (!visited.has(neighboor)) {
-        visited.add(neighboor);
-        queue.push(neighboor);
+    for (let neighbor of graph[current]) {
+      if (!visited.has(neighbor)) {
+        visited.add(neighbor);
+        queue.push(neighbor);
       }
     }
   }

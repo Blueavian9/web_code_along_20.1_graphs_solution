@@ -18,7 +18,7 @@
 //     queue.push(current.left);
 //   }
 //   if (current.right !== null) {
-//     queue.push(current.righth);
+//     queue.push(current.right);
 //   }
 // }
 // return values;
@@ -48,7 +48,7 @@ function traverse(root) {
   const queue = [];
 
   // your BFT code here
-  // Enque: queue.push(value)
+  // Enqueue: queue.push(value)
   queue.push(root);
   while (queue.length) {
     // Serve level
@@ -139,11 +139,11 @@ console.log(traverse(head)); // 6, 3, 9
 // }
 // const log = () => {
 // console.log(i); // i == output
-// }; // inside the for loop is where closures come into play define a function log that concole.log's the global variable "i". this is not a pure function because it depends on a variable outside of it's scope therefore creating a closure
+// }; // inside the for loop is where closures come into play define a function log that console.log's the global variable "i". this is not a pure function because it depends on a variable outside of it's scope therefore creating a closure
 //
-// setTimeout(log, 100);  // then from there we set up a Timeout functioin as the callback this queue's up a task to execute the log function after 100 miliseconds.
+// setTimeout(log, 100);  // then from there we set up a Timeout function as the callback this queue's up a task to execute the log function after 100 milliseconds.
 
-// we are capturing the i in a varible for each iteration of a loop so
+// we are capturing the i in a variable for each iteration of a loop so
 // The tricky part about a closure is that the var and let
 // when we use var in a for loop that variable actually gets hoisted up into that parent scope which in this case would be the global scope
 // with var we have a global variable that we are mutating over and over again
