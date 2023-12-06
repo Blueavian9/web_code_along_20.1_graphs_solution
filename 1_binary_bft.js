@@ -150,25 +150,25 @@ console.log(traverse(head)); // 6, 3, 9
 // but with let we are creating a variable that is scoped to the for loop in simple words it's local to the for loop and can't be accessed outside of it.
 // Thus a closure is a combination of of a function and it's lexical environment
 function traverse(root) {
-  const values = []
-  const queue = []
+  const values = [];
+  const queue = [];
   //YOUR CODE GOES HERE
-  queue.push(root)
+  queue.push(root);
   //Dequeue: queue.shift()
   while (queue.length) {
-    let current = queue.shift()
-
+    let current = queue.shift();
   }
 }
 
 /* 
+
 PLAN: 
-
-1. 
-
-2.
-3. 
+1. utilize a queue and array. Initialize to empty values. Done
+2. enqueue rest node: Done
+3a.once you have values inside the queue start serving these nodes. 
 3b. dequeue the queue + push to output array
-4. repeat until queue is empty
-5. return output array. 
+list. 2: is to enqueue its children (left & right) to the queue.
+4. repeat step 3 while or as long as we have values inside the queue.
+5. once the queue is empty return the output list. 
+
 */
