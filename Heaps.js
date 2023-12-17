@@ -76,3 +76,6 @@ class MinHeap {
   console.log(myHeap.extractMin()); // Outputs 5
   console.log(myHeap.heap); // Outputs [10, 20]
   
+
+  /* The insert method adds an element, and extractMin removes and returns the minimum element. The bubbleUp and bubbleDown methods ensure the heap property is maintained
+  */
